@@ -27,7 +27,7 @@ Em Dados Coletados > Templates ou Grupo de hosts, passe o mouse em cima para vis
 
 ![Title](imagens/2.png)
 
-Ou execute o *info_zabbix.py* para buscar os groupip.
+Ou execute o *info_zabbix.py* para buscar os groupid.
 
 ***python info_zabbix.py***
 ```
