@@ -3,10 +3,8 @@ Importando Hosts SNMP ou Agent no Zabbix via Excel.
 
 Script foi construído para facilitar o cadastro de Host no Zabbix, tornando o processo mais ágil e evitando erros manuais.
 
-![Title](images/1.jfif)
 
-
-###Como Utilizar?
+### Como Utilizar?
 
 `Python` https://www.python.org/downloads/windows/
 
@@ -14,6 +12,8 @@ Instale as dependências:
 ```
 pip install -r requirements.txt
 ```
+
+
 
 **Preencha os campos da planilha:**
 
@@ -27,9 +27,9 @@ Em Dados Coletados > Templates ou Grupo de hosts, passe o mouse em cima para vis
 
 ![Title](imagens/2.png)
 
-Ou execute o info_zabbix.py para buscar os groupip.
+Ou execute o *info_zabbix.py* para buscar os groupip.
 
-python info_zabbix.py
+***python info_zabbix.py***
 ```
 import requests
 import json
@@ -60,7 +60,9 @@ if response.status_code == 200:
 else:
     print("Erro ao consultar API:", response.status_code)
 ```
+
 ![Title](imagens/7.png)
+
 
 
 Preencha as váriaveis com a URL e Token do seu Zabbix.
@@ -69,7 +71,10 @@ ZABBIX_URL = "URL_ZABBIX/zabbix/api_jsonrpc.php"
 AUTH_TOKEN = "Token"
 ```
 
+
 Criar Token = Configuração > Tokens da API > Criar Token
+
+
 
 Rode o Script: python IMPORT_HOST_ZABBIX.py
 
