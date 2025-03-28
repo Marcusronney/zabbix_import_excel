@@ -75,6 +75,10 @@ AUTH_TOKEN = "Token"
 Criar Token = Configuração > Tokens da API > Criar Token
 
 
+**HOST Agent** = Preencha o Template com o iD de algum template que utiliza Agent.
+
+**HOST SNMP** = Preencha o Template com o ID de algum template que utiliza SNMP e preencha a comunnity.
+
 
 Rode o Script: python IMPORT_HOST_ZABBIX.py
 
