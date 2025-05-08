@@ -86,13 +86,13 @@ def create_host(auth_token, host_ip, host_name, display_name, group_ids, templat
             if "result" in result:
                 return result['result']
             elif "error" in result:
-                print("❌ Erro da API Zabbix:", result['error']['data'])
+                print(" Erro da API Zabbix:", result['error']['data'])
                 return None
         except json.JSONDecodeError as e:
             print(f"Erro de decodificação JSON: {e}")
             return None
     else:
-        print("❌ Resposta inválida da API.")
+        print(" Resposta inválida da API.")
         return None
 
 #Carregando a planilha
@@ -121,7 +121,7 @@ def main():
 
 #Verifica se os campos obrigatórios estão preenchidos.
             if not host_ip or not host_name or not display_name or not group_ids:
-                print(f"⚠️ Linha {index + 2}: Dados obrigatórios ausentes. Pulando...")
+                print(f" Linha {index + 2}: Dados obrigatórios ausentes. Pulando...")
                 continue
 
 #Criando o Host.
@@ -139,16 +139,16 @@ def main():
 
 #Exibir resultos
             if result:
-                print(f"✅ Host criado com sucesso! ID: {result['hostids'][0]}")
+                print(f" Host criado com sucesso! ID: {result['hostids'][0]}")
             else:
-                print(f"❌ Falha ao criar host: {host_name} ({host_ip})")
+                print(f" Falha ao criar host: {host_name} ({host_ip})")
 
     except FileNotFoundError:
-        print(f"❌ Arquivo {excel_file} não encontrado.")
+        print(f" Arquivo {excel_file} não encontrado.")
     except KeyError as e:
-        print(f"❌ Coluna obrigatória ausente no Excel: {e}")
+        print(f" Coluna obrigatória ausente no Excel: {e}")
     except Exception as e:
-        print(f"❌ Erro inesperado: {e}")
+        print(f" Erro inesperado: {e}")
 
 if __name__ == "__main__":
     main()
