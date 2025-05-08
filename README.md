@@ -1,6 +1,8 @@
 # zabbix_import_excel
 Importando Hosts SNMP ou Agent no Zabbix via Excel.
 
+![Title](imagens/excelZabbix.png)
+
 Script foi construído para facilitar o cadastro de Host no Zabbix, tornando o processo mais ágil e evitando erros manuais.
 
 
